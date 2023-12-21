@@ -91,6 +91,7 @@ main{
    display: flex;
    flex-direction: column;
    padding: 0px 1em;
+   width: 25em;
 }
 .notifications .info > p:first-child{
    display: flex;
@@ -117,4 +118,7 @@ main{
 .notifications .message{
    position: static;
    width: 100%;
+}
+.bold{
+   font-weight: bold;
 }
