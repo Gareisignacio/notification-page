@@ -64,16 +64,27 @@ header > span{
 main{
    height: 100%;
    overflow: hidden;
+}
 
+.main-container{
+   background-color: var(--color2);
+   border-radius: 10px;
+   padding: 1em 1em;
+   margin-bottom: .5em;
+}
+.main-container .message{
+   margin-left: 4.5em;
+   margin-top: .5em;
+   border-radius: 5px;
+   font-size: 13px;
+   padding: 1em;
+   border: 1px solid var(--color2);
+   background-color: white;
 }
 .notifications{
    display: flex;
-   justify-content: space-between;
-   padding: 1em 1em;
-   margin-bottom: .5em;
-   border-radius: 5px;
+   justify-content:baseline;
    overflow-y: hidden;
-   background-color: var(--color2);
 }
 .notifications .info{
    font-size: 13px;
@@ -103,4 +114,7 @@ main{
    width: 3em;
    height: 3em;
 }
-
+.notifications .message{
+   position: static;
+   width: 100%;
+}
