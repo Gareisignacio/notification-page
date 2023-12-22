@@ -1,7 +1,7 @@
 .container{
    margin: 2em 0em;
-   width: 33em;
-   height: 42em;
+   width: 42em;
+   height: auto;
    background-color: #ffffff;
    display: flex;
    flex-direction: column;
@@ -12,7 +12,7 @@
    header{
       width: 100%;
       display: flex;
-      margin-bottom: 2em;
+      margin-bottom: .5em;
       align-items: center;
    h1{
       font-size: 1.5em;
@@ -30,7 +30,7 @@
       font-weight: bold;
    }
    .mark-read{
-      padding-left: 10.1em;
+      padding-left: 15em;
       color: var(--light-gray);
    }
    }
@@ -39,7 +39,7 @@
       height: 100%;
       overflow: hidden;
       .main-container{
-         background-color: var(--color2);
+         background-color: white;
          border-radius: 10px;
          padding: 1em 1em;
          margin-bottom: .5em;
@@ -49,59 +49,72 @@
             border-radius: 5px;
             font-size: 13px;
             padding: 1em;
-            border: 1px solid var(--color2);
+            border: 1px solid var(--light-gray);
             background-color: white;
+            text-align: justify;
          }
          .notifications{
             display: flex;
+            flex-direction: column;
             justify-content:baseline;
             overflow-y: hidden;
-            .info{
-               font-size: 13px;
+            margin-bottom: 1em;
+            background-color: var(--color2);
+            padding: 1em;
+            border-radius: 5px;
+            .arriba{
                display: flex;
-               flex-direction: column;
-               padding: 0px 1em;
-               width: 25em;
-               .user-notif{
-                  .name{
-                     font-weight: bold;
-                     color: black;
+               .info{
+                  font-size: 13px;
+                  display: flex;
+                  padding: 0px 1em;
+                     flex-direction: column;
+                  .user-notif{
+                     width: 32em;
+                     .name{
+                        font-weight: bold;
+                        color: black;
+                     }
+                     .action{
+                        color: var(--light-gray);
+                        padding-left: 5px;
+                     }
+                     .post{
+                        color: var(--gray);
+                        font-weight: bold;
+                        padding-left: 5px;
+                     }
+                     .group{
+                        font-weight: bold;
+                        color: var(--dark-blue);
+                        padding-left: 5px;
+                     }
                   }
-                  .action{
+                  .time-ago{
                      color: var(--light-gray);
                   }
-                  .post{
-                     color: var(--gray);
-                     font-weight: bold;
-                  }
-                  .group{
-                     font-weight: bold;
-                     color: var(--dark-blue);
-                  }
                }
-               .time-ago{
-                  color: var(--light-gray);
+               .dot{
+                  width: 7px;
+                  height: 7px;
+                  background-color: red;
+                  border-radius: 25px;
+                  margin-top: .3em;
+                  margin-left: 10px;
+               }
+               .perfil-pic{
+                  width: 3em;
+                  height: 3em;
+               }
+               .post-pic{
+                  width: 3em;
+                  height: 3em;
+                  display: flex;
+                  justify-self: end;
+                  align-self: flex-end;
                }
             }
-            .dot{
-               width: 7px;
-               height: 7px;
-               background-color: red;
-               border-radius: 25px;
-               margin-top: .3em;
-               margin-left: 3px;
-            }
-            .perfil-pic{
-               width: 3em;
-               height: 3em;
-            }
-            .post-pic{
-               width: 3em;
-               height: 3em;
-            }
-            .message{
-               position: static;
-               width: 100%;
+            .abajo{
             }
          }
 

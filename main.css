@@ -23,8 +23,8 @@ body {
 
 .container {
   margin: 2em 0em;
-  width: 33em;
-  height: 42em;
+  width: 42em;
+  height: auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@ body {
   .container header {
     width: 100%;
     display: flex;
-    margin-bottom: 2em;
+    margin-bottom: .5em;
     align-items: center; }
     .container header h1 {
       font-size: 1.5em;
@@ -50,13 +50,13 @@ body {
       color: #ffffff;
       font-weight: bold; }
     .container header .mark-read {
-      padding-left: 10.1em;
+      padding-left: 15em;
       color: var(--light-gray); }
   .container main {
     height: 100%;
     overflow: hidden; }
     .container main .main-container {
-      background-color: var(--color2);
+      background-color: white;
       border-radius: 10px;
       padding: 1em 1em;
       margin-bottom: .5em; }
@@ -66,47 +66,59 @@ body {
         border-radius: 5px;
         font-size: 13px;
         padding: 1em;
-        border: 1px solid var(--color2);
-        background-color: white; }
+        border: 1px solid var(--light-gray);
+        background-color: white;
+        text-align: justify; }
       .container main .main-container .notifications {
         display: flex;
+        flex-direction: column;
         justify-content: baseline;
-        overflow-y: hidden; }
-        .container main .main-container .notifications .info {
-          font-size: 13px;
-          display: flex;
-          flex-direction: column;
-          padding: 0px 1em;
-          width: 25em; }
-          .container main .main-container .notifications .info .user-notif .name {
-            font-weight: bold;
-            color: black; }
-          .container main .main-container .notifications .info .user-notif .action {
-            color: var(--light-gray); }
-          .container main .main-container .notifications .info .user-notif .post {
-            color: var(--gray);
-            font-weight: bold; }
-          .container main .main-container .notifications .info .user-notif .group {
-            font-weight: bold;
-            color: var(--dark-blue); }
-          .container main .main-container .notifications .info .time-ago {
-            color: var(--light-gray); }
-        .container main .main-container .notifications .dot {
-          width: 7px;
-          height: 7px;
-          background-color: red;
-          border-radius: 25px;
-          margin-top: .3em;
-          margin-left: 3px; }
-        .container main .main-container .notifications .perfil-pic {
-          width: 3em;
-          height: 3em; }
-        .container main .main-container .notifications .post-pic {
-          width: 3em;
-          height: 3em; }
-        .container main .main-container .notifications .message {
-          position: static;
-          width: 100%; }
+        overflow-y: hidden;
+        margin-bottom: 1em;
+        background-color: var(--color2);
+        padding: 1em;
+        border-radius: 5px; }
+        .container main .main-container .notifications .arriba {
+          display: flex; }
+          .container main .main-container .notifications .arriba .info {
+            font-size: 13px;
+            display: flex;
+            padding: 0px 1em;
+            flex-direction: column; }
+            .container main .main-container .notifications .arriba .info .user-notif {
+              width: 32em; }
+              .container main .main-container .notifications .arriba .info .user-notif .name {
+                font-weight: bold;
+                color: black; }
+              .container main .main-container .notifications .arriba .info .user-notif .action {
+                color: var(--light-gray);
+                padding-left: 5px; }
+              .container main .main-container .notifications .arriba .info .user-notif .post {
+                color: var(--gray);
+                font-weight: bold;
+                padding-left: 5px; }
+              .container main .main-container .notifications .arriba .info .user-notif .group {
+                font-weight: bold;
+                color: var(--dark-blue);
+                padding-left: 5px; }
+            .container main .main-container .notifications .arriba .info .time-ago {
+              color: var(--light-gray); }
+          .container main .main-container .notifications .arriba .dot {
+            width: 7px;
+            height: 7px;
+            background-color: red;
+            border-radius: 25px;
+            margin-top: .3em;
+            margin-left: 10px; }
+          .container main .main-container .notifications .arriba .perfil-pic {
+            width: 3em;
+            height: 3em; }
+          .container main .main-container .notifications .arriba .post-pic {
+            width: 3em;
+            height: 3em;
+            display: flex;
+            justify-self: end;
+            align-self: flex-end; }
 
 .bold {
   font-weight: bold; }

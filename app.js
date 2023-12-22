@@ -35,7 +35,6 @@ const notificationList = [
       action: "commented on your picture",
       date: "1 week ago",
       perfil_pic: "assets/images/avatar-kimberly-smith.webp",
-      picture:"assets/images/image-chess.webp",
       read: false,
    },
    {
@@ -75,6 +74,11 @@ function notificationArray(){
       let userDiv = document.createElement("div");
       userDiv.classList.add("user-notif");
 
+      let arribaDiv = document.createElement("div");
+      arribaDiv.classList.add("arriba")
+      let abajoDiv = document.createElement("div");
+      abajoDiv.classList.add("abajo");
+
       //Paragraphs
       let nameSpan = document.createElement("span");
       nameSpan.classList.add("name")
@@ -84,6 +88,9 @@ function notificationArray(){
       actionSpan.classList.add("action");
       actionSpan.textContent = notificationList[i].action;
       
+      userDiv.appendChild(nameSpan);
+      userDiv.appendChild(actionSpan);
+
       if(notificationList[i].post !== undefined){
          let postSpan = document.createElement("span");
          postSpan.classList.add("post");
@@ -96,10 +103,14 @@ function notificationArray(){
          userDiv.appendChild(groupSpan);
       }
       
+      arribaDiv.appendChild(profilePic);
+      arribaDiv.appendChild(infoDiv);
+
       if(notificationList[i].picture !== undefined){
          let postImg = document.createElement("img");
          postImg.classList.add("post-pic");
          postImg.src = notificationList[i].picture;
+         arribaDiv.appendChild(postImg);
       }
 
       let timeAgoPara = document.createElement("p");
@@ -109,29 +120,32 @@ function notificationArray(){
          let messagePara = document.createElement("p");
          messagePara.classList.add("message");
          messagePara.textContent = notificationList[i].message;
+         abajoDiv.appendChild(messagePara);
       }
+
+      let notReadDot = document.createElement("canvas");
+      notReadDot.classList.add("dot");
+      userDiv.appendChild(notReadDot);
+
    
       // Introducir Div
       profilePic.src = notificationList[i].perfil_pic;
 
-      userDiv.appendChild(nameSpan);
-      userDiv.appendChild(actionSpan);
+
 
       timeAgoPara.textContent = notificationList[i].date;
 
-      notifDiv.appendChild(profilePic);
-      notifDiv.appendChild(userDiv);
 
-      infoDiv.appendChild(userNotif);
+      infoDiv.appendChild(userDiv);
       infoDiv.appendChild(timeAgoPara);
 
-      notifDiv.appendChild(infoDiv)
 
-      notifDiv.appendChild(postImg);
-      
+      notifDiv.appendChild(arribaDiv);
+      notifDiv.appendChild(abajoDiv)
+
       mainContainer.appendChild(notifDiv);
-      mainContainer.appendChild(messagePara);
    }
 }
 
 notificationArray();
+
