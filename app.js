@@ -35,6 +35,7 @@ const notificationList = [
       action: "commented on your picture",
       date: "1 week ago",
       perfil_pic: "assets/images/avatar-kimberly-smith.webp",
+      picture:"assets/images/image-chess.webp",
       read: false,
    },
    {
@@ -51,7 +52,6 @@ const notificationList = [
       group: "Chess Club",
       date: "2 week ago",
       perfil_pic: "assets/images/avatar-anna-kim.webp",
-      picture:"assets/images/image-chess.webp",
       read: false,
    }
 ];
@@ -59,9 +59,13 @@ const notificationList = [
 const mainContainer = document.querySelector(".main-container");
 const markBtn = document.querySelector(".mark-read");
 const redDot = document.querySelector(".dot");
+const notifNumber = document.querySelector(".notifNum");
 
+
+let count = 0;
 function notificationArray(){
    for(let i = 0; i < notificationList.length; i++){
+      count++;
       let notifDiv = document.createElement("div");
       notifDiv.classList.add("notifications");
    
@@ -79,7 +83,7 @@ function notificationArray(){
       let abajoDiv = document.createElement("div");
       abajoDiv.classList.add("abajo");
 
-      //Paragraphs
+      //Spans
       let nameSpan = document.createElement("span");
       nameSpan.classList.add("name")
       nameSpan.textContent = notificationList[i].name;
@@ -144,7 +148,33 @@ function notificationArray(){
       notifDiv.appendChild(abajoDiv)
 
       mainContainer.appendChild(notifDiv);
+
+      let state = notificationList[i].read;
+      notifDiv.addEventListener("click", function(){
+         if(state === false){
+            notifDiv.style = "background: white"
+            notReadDot.style = "display:none";
+            state = true;
+            count--;
+            notifNumber.textContent = count;
+         }
+      });
+      
+      markBtn.addEventListener("click", function(){
+         if(state === false){
+            notifDiv.style = "background: white"
+            notReadDot.style = "display:none";
+            state = true;
+            count = 0;
+            notifNumber.textContent = count;
+
+         }
+      });
+      notifNumber.textContent = count;
+
    }
+   
+
 }
 
 notificationArray();

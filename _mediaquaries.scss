@@ -1,0 +1,73 @@
+@media (max-width: 425px){
+   .container{
+      font-size: .8em;
+      margin: 0em 0em;
+      margin-bottom: 1.5em;
+      padding-top: 1.5em;
+      border-radius: 0;
+      width: 100%;
+      padding-bottom: 0em;
+         header{
+            .mark-read{
+               padding-left: 9.7em;
+            }
+         }
+         main{
+            padding-bottom: 0;
+            .main-container{
+               .message{
+                  width: 24em;
+                  font-size: 10px;
+               }
+               .notifications{
+                  width: 28em;
+                  .arriba{
+                     .info{
+                        font-size: 11px;
+                        width: 12em;
+                        .user-notif{
+                           width: 26em;
+                        }
+                     }
+                     .post-pic{
+                        margin-left: 10.3em;
+                     }
+
+                  }
+               }
+            }
+         }
+   }
+   
+}
+
+@media (max-width: 375px){
+   .container{
+      header{
+         .mark-read{
+            padding-left: 8em;
+            text-align: center;
+         }
+      }
+      main{
+         .main-container{
+            .notifications{
+               width: 24em;
+               .arriba{
+                  .info{
+                     font-size: 10.7px;
+                     width: 27em;
+                     .user-notif{
+                        width: 17.5em;
+                     }
+                  }
+                  .post-pic{
+                     margin-left: 0em;
+                  }
+
+               }
+            }
+         }
+      }
+   }
+}

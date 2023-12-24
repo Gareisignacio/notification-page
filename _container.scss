@@ -30,8 +30,9 @@
       font-weight: bold;
    }
    .mark-read{
-      padding-left: 15em;
+      padding-left: 18em;
       color: var(--light-gray);
+      cursor: pointer;
    }
    }
 
@@ -121,8 +122,4 @@
       }
 
    }
-}
-
-.bold{
-   font-weight: bold;
 }
